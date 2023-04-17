@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: build-app-deployment
+  namespace: projeto-final-build-app
+spec:
+  selector:
+    matchLabels:
+      app: build-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: build-app
+    spec:
+      containers:
+        - name: build-app
+          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          ports:
+            - containerPort: 3000
