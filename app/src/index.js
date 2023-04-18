@@ -3,7 +3,7 @@ import ReactDOM from 'react';
 
 function HelloWorld() {
     const shoot = () => {
-      alert("Projeto Final - Saulo Silveira Correa");
+      alert("Projeto Final Alterado - Saulo Silveira Correa");
     }
   
     return (
